@@ -1,0 +1,36 @@
+States:
+    Home
+    Searching
+    ViewingProduct
+    ViewingCart
+    CheckingOut
+
+Transitions:
+    Search
+    ViewProduct
+    AddToCart
+    ViewCart
+    RemoveFromCart
+    CheckOut
+    GoHome
+
+Variables:
+    boolean home
+    boolean searching
+    boolean viewingProduct
+    boolean viewingCart
+    boolean checkingOut
+    int cartItems
+
+Model:
+    Home -> Search -> Searching
+    Home -> ViewCart -> ViewingCart
+    Searching -> ViewProduct -> ViewingProduct
+    ViewingProduct -> AddToCart -> ViewingProduct
+    ViewingProduct -> ViewCart -> ViewingCart
+    ViewingProduct -> GoHome -> Home
+    ViewingCart -> RemoveFromCart -> ViewingCart
+    ViewingCart -> CheckOut -> CheckingOut
+    ViewingCart -> GoHome -> Home
+    CheckingOut -> GoHome -> Home
+

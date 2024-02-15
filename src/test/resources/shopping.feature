@@ -13,8 +13,12 @@ Feature: Exploring products in website
     Then I should be taken to the details page for that product
 
     Examples:
-    |category-name|num-products|
-    |"Tablets"    |5           |
+    |category-name    |num-products|
+    |"Laptops"        |3           |
+    |"Tablets"        |5           |
+    |"Monitors"       |5           |
+    |"Printers"       |5           |
+    |"Gaming Headsets"|5           |
 
   Scenario Outline: Search functionality
     Given I am a user of the website
